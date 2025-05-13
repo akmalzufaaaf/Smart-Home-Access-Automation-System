@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gateway-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: device-gateway
+  template:
+    metadata:
+      labels:
+        app: device-gateway
+    spec:
+      containers:
+      - name: device-gateway
+        image: yourdockerhub/device-gateway:latest
+        ports:
+        - containerPort: 5001

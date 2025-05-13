@@ -1,0 +1,8 @@
+<h2>Smart Doorlock Dashboard</h2>
+<p>Welcome, {{ session['user'] }}</p>
+<a href="/users">Kelola Pengguna</a> |
+<a href="/logs">Riwayat Akses</a> |
+<form action="/open-door" method="POST">
+    <button type="submit">Buka Pintu</button>
+</form>
+<a href="/logout">Logout</a>

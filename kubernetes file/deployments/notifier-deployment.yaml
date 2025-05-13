@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: notifier-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: notifier-service
+  template:
+    metadata:
+      labels:
+        app: notifier-service
+    spec:
+      containers:
+      - name: notifier-service
+        image: yourdockerhub/notifier-service:latest
+        ports:
+        - containerPort: 5003

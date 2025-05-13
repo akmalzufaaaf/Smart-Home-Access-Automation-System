@@ -1,0 +1,7 @@
+<h2>Pengguna Terdaftar</h2>
+<ul>
+{% for user in users %}
+    <li>{{ user.name }} - {{ user.method }}</li>
+{% endfor %}
+</ul>
+<a href="/dashboard">Kembali</a>

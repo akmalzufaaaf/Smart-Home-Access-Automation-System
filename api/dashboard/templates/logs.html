@@ -1,0 +1,7 @@
+<h2>Riwayat Akses</h2>
+<ul>
+{% for log in logs %}
+    <li>{{ log.timestamp }} - {{ log.user }} - {{ log.method }} - {{ log.status }}</li>
+{% endfor %}
+</ul>
+<a href="/dashboard">Kembali</a>

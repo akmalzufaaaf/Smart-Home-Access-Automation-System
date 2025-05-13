@@ -1,0 +1,20 @@
+# This is example file --> template for Deployment yaml file
+apiVersion: apps/v1 # name api version (it can be anything)
+kind: Deployment # specify jenis object, bisa Deployment, Pod, Service
+metadata:
+  name: example-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: example
+  template:
+    matedata:
+      label:
+        app: example
+    spec:
+      containers:
+      - name: example-container
+        image: example-image
+        ports:
+        - containerPorts: 8080
